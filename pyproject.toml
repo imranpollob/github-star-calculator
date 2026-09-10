@@ -1,3 +1,46 @@
 [build-system]
 requires = ["setuptools>=42", "wheel"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "gitstar"
+version = "1.1.0"
+description = "Calculate the total stars earned by a GitHub user or organization"
+readme = "README.md"
+license = { text = "MIT" }
+license = "MIT"
+authors = [
+    { name = "Imran Pollob", email = "imranpollob@gmail.com" }
+]
+requires-python = ">=3.8"
+keywords = ["github", "stars", "stargazers", "cli", "github-api", "developer-tools"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/imranpollob/github-star-calculator"
+Repository = "https://github.com/imranpollob/github-star-calculator.git"
+Issues = "https://github.com/imranpollob/github-star-calculator/issues"
+
+[project.scripts]
+gitstar = "gitstar.core:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["gitstar*"]
